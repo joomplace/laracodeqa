@@ -1,7 +1,7 @@
 version: "2"
 services:
   phpqa:
-    image: phpqa:0.2
+    image: joomplace/laracodeqa
     volumes:
     - ../code/:/app
     networks:
