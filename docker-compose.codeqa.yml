@@ -1,0 +1,14 @@
+version: "2"
+services:
+  phpqa:
+    image: phpqa:0.2
+    volumes:
+    - ../code/:/app
+    networks:
+    - application
+#    entrypoint:
+#    - php
+#    - artisan
+#    - code:analyse
+#    - --error-format
+#    - table
