@@ -15,4 +15,5 @@ COPY ./entrypoint.sh /entrypoint.sh
 RUN chmod a+x /entrypoint.sh
 
 WORKDIR /app
-ENTRYPOINT /entrypoint.sh
+CMD ["composer","require","--dev","nunomaduro/larastan","&&","php","artisan","code:analyse"]
+#ENTRYPOINT /entrypoint.sh
