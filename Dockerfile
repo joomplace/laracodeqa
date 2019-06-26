@@ -9,7 +9,8 @@ RUN curl -sS https://getcomposer.org/installer | php && \
     chmod a+x composer.phar && \
     mv composer.phar /usr/local/bin/composer
 
-ADD ./entrypoint.sh /entrypoint.sh
+COPY ./entrypoint.sh /entrypoint.sh
+RUN chmod a+x /entrypoint.sh
 
 WORKDIR /app
 ENTRYPOINT /entrypoint.sh
